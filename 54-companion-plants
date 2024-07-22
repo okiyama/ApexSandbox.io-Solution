@@ -1,0 +1,12 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    Boolean hasLettuce = plant1 == 'lettuce' || plant2 == 'lettuce';
+    Boolean hasCucumber = plant1 == 'cucumbers' || plant2 == 'cucumbers';
+    Boolean hasOnion = plant1 == 'onions' || plant2 == 'onions';
+    Boolean hasCarrots = plant1 == 'carrots' || plant2 == 'carrots';
+    Boolean hasTomatoes = plant1 == 'tomatoes' || plant2 == 'tomatoes';
+
+    return (hasLettuce && hasCucumber) ||
+        (hasLettuce && hasOnion) || 
+        (hasOnion && hasCarrots) || 
+        (hasOnion && hasTomatoes);
+}
