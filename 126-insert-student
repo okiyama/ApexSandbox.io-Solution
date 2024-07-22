@@ -4,6 +4,5 @@ public Id insertStudent(String name, String email) {
         apxio__Email__c = email
     );
 
-    insert newStudent;
-    return newStudent.Id;
+    return (insert newStudent).Id;
 }
