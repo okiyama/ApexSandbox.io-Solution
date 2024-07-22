@@ -1,3 +1,6 @@
 public String formatName(String firstName, String lastName) {
-    return lastName == null ? firstName == null ? '' : firstName : lastName + ', ' + firstName;
+    String toRet = '';
+    toRet += lastName != null ? lastName : '';
+    toRet += (firstName != null && toRet != '') ? ', ' + firstName : firstName != null ? firstName : '';
+    return toRet;
 }
