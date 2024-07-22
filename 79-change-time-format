@@ -2,6 +2,6 @@ public String changeTimeFormat(String strTime) {
     String[] split = strTime.split(':');
     Integer hours = Integer.valueOf(split[0]);
     Boolean isPm = hours >= 12 && hours < 24; //I think? midnight is AM
-    String hoursFormatted = ('' + Math.mod(hours, 12) + 12).leftPad(2, '0');
+    String hoursFormatted = ('' + (Math.mod(hours, 12) + 12)).leftPad(2, '0');
     return hoursFormatted + ':' + split[1] + (isPm ? ' PM' : ' AM');
 }
