@@ -9,4 +9,5 @@ public Id classFromCourse(String courseName) {
         apxio__Course__c = existingCourse[0].Id
     );
     insert newCourse;
+    return newCourse.Id;
 }
