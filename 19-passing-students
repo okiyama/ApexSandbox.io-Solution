@@ -1,5 +1,7 @@
 public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
     Integer numTrue = 0;
     numTrue += passedExam ? 1 : 0;
+    numTrue += passedAssignments ? 1 : 0;
+    numTrue += passedProject ? 1 : 0;
     return numTrue >= 2;
 }
