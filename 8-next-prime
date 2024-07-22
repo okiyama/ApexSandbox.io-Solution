@@ -1,10 +1,10 @@
 public Integer nextPrime(Integer num) {
-    while (!isPrime(++num) || num < 0) {}
+    while (!isPrime(++num)) {}
     return num;
 }
 
 public Boolean isPrime(Integer num) {
-    if (num == 0) { return false; }
+    if (num < 2) { return false; }
     for (Integer i = 2; i < num; i++) {
         if (Math.mod(num, i) == 0) {
             return false;
