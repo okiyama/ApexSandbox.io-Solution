@@ -1,7 +1,10 @@
 public String aOrAn(String word) {
-    List<String> vowels = ["a", "e", "i", "o", "u"];
-    if word[0] in vowels {
-        return "an " + word;
+    Set<String> vowels = new Set<String>{'a', 'e', 'i', 'o', 'u'};
+     if (word != null && word.length() > 0) {
+        String firstLetter = word.substring(0, 1).toLowerCase();
+        if (vowels.contains(firstLetter)) {
+            return "an " + word;
+        }
     }
     return "a " + word;
 }
