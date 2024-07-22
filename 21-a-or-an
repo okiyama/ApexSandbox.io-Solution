@@ -1,0 +1,7 @@
+public String aOrAn(String word) {
+    List<String> vowels = ["a", "e", "i", "o", "u"];
+    if word[0] in vowels {
+        return "an " + word;
+    }
+    return "a " + word;
+}
