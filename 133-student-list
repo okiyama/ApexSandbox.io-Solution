@@ -3,6 +3,6 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         apxio__Student__c newStudent = new apxio__Student__c(
             Name = studentNames[i],
             apxio__Email__c = studentEmails[i]
-        )
+        );
     }
 }
