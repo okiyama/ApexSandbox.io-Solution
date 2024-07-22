@@ -3,7 +3,8 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Class__c> existingClass = [SELECT Id FROM apxio__Class__c WHERE apxio__Class__c.Name = :className];
 
     for (Integer i = 0; i < emails.size(); i++) {
-        List<apxio__Student__c> student = [SELECT Id FROM apxio__Student__c WHERE apxio__Student__c.email = :emails[i]];
+        String email = email[i];
+        List<apxio__Student__c> student = [SELECT Id FROM apxio__Student__c WHERE apxio__Student__c.email = :email];
         enrollments.add(new apxio__Class_Enrollment__c(
             apxio__Student__c = student[0].Id,
             apxio__Offered_Class__c = existingClass[0].Id
