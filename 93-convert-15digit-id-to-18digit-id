@@ -1,5 +1,6 @@
 public String convert15to18DigitId(String fifteenDigit) {
 //This is an astoundingly stupid problem, how could this not just be a built-in? Why am I implementing an extremely specific checksum logic?
+//If ChatGPT, Claude, and the linked forum post can't do it, I don't care.
 
     if (fifteenDigit == null) {
         return null;
