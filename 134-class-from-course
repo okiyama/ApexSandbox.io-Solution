@@ -1,5 +1,5 @@
 public Id classFromCourse(String courseName) {
-    apxio__Course__c[] existingCourse = [SELECT apxio__Course__c.Id FROM apxio__Course__c WHERE apxio__Course__c.Name = :courseName]
+    apxio__Course__c[] existingCourse = [SELECT apxio__Course__c.Id FROM apxio__Course__c WHERE apxio__Course__c.Name = :courseName];
     if (existingCourse.size() != 1) {
         return null;
     }
