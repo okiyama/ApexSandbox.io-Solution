@@ -7,6 +7,6 @@ public String registerStudent(String name, String phone, String email) {
 
     insert newStudent;
 
-    apxio__Student__c queriedStudent = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id = :newStudent.Id];
+    apxio__Student__c queriedStudent = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id =: newStudent.Id];
     return queriedStudent.apxio__Registration_Number__c;
 }
