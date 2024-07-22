@@ -1,0 +1,27 @@
+public String convert15to18DigitId(String fifteenDigit) {
+//This is an astoundingly stupid problem, how could this not just be a built-in? Why am I implementing an extremely specific checksum logic?
+
+    if (fifteenDigit == null) {
+        return null;
+    }
+    
+    if (fifteenDigit.length() != 15) {
+        return '-1';
+    }
+    
+    String chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
+    String suffix = '';
+    
+    for (Integer i = 0; i < 3; i++) {
+        Integer flags = 0;
+        for (Integer j = 0; j < 5; j++) {
+            String c = fifteenDigit.substring(i * 5 + j, i * 5 + j + 1);
+            if (c >= 'A' && c <= 'Z' || c >= '0' && c <= '9') {
+                flags += (1 << j);
+            }
+        }
+        suffix += chars.charAt(flags);
+    }
+    
+    return fifteenDigit + suffix;
+}
