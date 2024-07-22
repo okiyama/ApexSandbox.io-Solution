@@ -1,0 +1,4 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    Integer numTrue = 0;
+    numTrue += passedExam ? 1 : 0;
+}
