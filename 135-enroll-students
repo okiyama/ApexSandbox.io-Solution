@@ -4,7 +4,7 @@ public void enrollStudents(List<String> emails, String className) {
 
     for (Integer i = 0; i < emails.size(); i++) {
         String email = emails[i];
-        List<apxio__Student__c> student = [SELECT Id FROM apxio__Student__c WHERE apxio__Student__c.email = :email];
+        List<apxio__Student__c> student = [SELECT Id FROM apxio__Student__c WHERE apxio__Student__c.apxio__Email__c = :email];
         enrollments.add(new apxio__Class_Enrollment__c(
             apxio__Student__c = student[0].Id,
             apxio__Offered_Class__c = existingClass[0].Id
