@@ -7,6 +7,6 @@ public Id classFromCourse(String courseName) {
     apxio__Class__c newCourse = new apxio__Class__c(
         name = courseName,
         apxio__Course__c = existingCourse.Id
-    )
+    );
     insert newCourse;
 }
