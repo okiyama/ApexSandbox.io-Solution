@@ -1,0 +1,5 @@
+public String nameFromEmail(String email) {
+    String nameChunk = email.split('@')[0];
+    String nameSplit = nameChunk.split('\\.');
+    return nameSplit[0].capitalize() + ' ' + nameSplit[2].capitalize();
+}
