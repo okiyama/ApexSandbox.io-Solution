@@ -1,6 +1,6 @@
 public List<String> getFieldsValue(Account acc, List<String> fields)
 {
-    List values = new List();
+    List<String> values = new List<String>();
     for (String field : fields) {
         values.add(SObject.get(acc, field));
     }
