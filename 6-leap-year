@@ -3,5 +3,5 @@ public Boolean isLeapYear(Integer year) {
     Boolean divisibleBy100 = Math.mod(year, 100) == 0;
     Boolean divisibleBy400 = Math.mod(year, 400) == 0;
 
-    return (divisibleBy100 && divisibleBy400) || divisibleBy4;
+    return (divisibleBy100 && divisibleBy400) || (divisibleBy4 && !divisibleBy100);
 }
